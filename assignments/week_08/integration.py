@@ -25,6 +25,9 @@ def trapezoidal_rule(f, a, b, N):
     
     h = (b - a) / N
     total = 0.5 * f(a) + 0.5 * f(b)
+
+    s = 0
+
     for k in range(1, N):
         s += f(a + k * h)
  
