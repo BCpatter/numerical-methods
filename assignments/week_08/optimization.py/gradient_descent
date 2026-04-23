@@ -1,0 +1,22 @@
+def gradient_descent(grad_f, x0, learning_rate, n_steps):
+    """
+    
+    Args:
+        grad_f: A callable that returns the gradient of f at point x
+        x0: The starting point for the descent
+        learning_rate: The step size (alpha)
+        n_steps: The number of iterations to perform
+        
+    Returns:
+        x: The final value of x after n_steps
+        history: A list recording the value of x at every step (including x0)
+    """
+    x = x0
+    history = [x]
+    
+    for _ in range(n_steps):
+        # Update rule: x_new = x_old - learning_rate * gradient
+        x = x - learning_rate * grad_f(x)
+        history.append(x)
+        
+    return x, history

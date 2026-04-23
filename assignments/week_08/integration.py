@@ -67,3 +67,4 @@ def simpsons_rule(f, a, b, N):
     for i in range(2, N, 2):
         s += 2 * f(a + i * h)
     return (h / 3) * s
+
